@@ -62,7 +62,7 @@ You’ll need a Kubernetes cluster to run against. You can use [KIND](https://si
 The Makefile will use the `notebook-controller:<commit-hash>`, if you want to use a different image name of tag then simply change that line in the beginning of the makefile. Build and push your image to the location specified by `IMG` and `TAG`:
 	
 ```sh
-make docker-build docker-push IMG=<some-registry>/notebook-controller TAG=<some-tag>
+make docker-build docker-push IMG=abbywang678/notebook-controller TAG=v1.6.0-cvf
 ```
 	
 The Makefile has a `deploy` rule that will build and push the Docker image, create a `notebook-controller-system` namespace and finally generate and apply the necessary YAMLs. Deploy the controller to the cluster with the image specified by `IMG` and `TAG`:
